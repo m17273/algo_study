@@ -36,8 +36,7 @@ def merge_sort(a):
         i2 += 1
         ia += 1
 
-merge_sort(li)
-print(li)
+
         
 
             
