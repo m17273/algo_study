@@ -3,15 +3,15 @@ li = []
 
 for i in range(num):
     Input = str(input()) #sys.stdin.readline.split()했는데 안됨 ㅠㅠㅠㅠㅠ
-    li.append(Input)
-
-list_fin = list(set(li))
+    if Input not in li:
+        li.append(Input)
+list_fin = sorted(li)
 
 def merge_sort(a):
     n = len(a)
     
     if n<=1:
-        return 
+        return a
 
     mid = n//2
     g1 = a[:mid]
@@ -45,6 +45,7 @@ def merge_sort(a):
         a[ia] = g2[i2]
         i2 += 1
         ia += 1
+    
 
 merge_sort(list_fin)   #길이가 같은 것을 알파벳 순으로 정렬 X
 
