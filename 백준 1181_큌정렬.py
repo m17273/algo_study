@@ -20,16 +20,16 @@ def quick_sort(a):
     g2 = []
     g3 = []
 
-    for i in a:
-        if len(i)< len(pivot):
-            g1.append(i)
-        elif len(i) > len(pivot):
-            g2.append(i)
+    for i in range(n):
+        if len(a[i])< len(pivot):
+            g1.append(a[i])
+        elif len(a[i]) > len(pivot):
+            g2.append(a[i])
         else:
-            g3.append(i)
+            g3.append(a[i])
            
             
-    return quick_sort(g1) + g3 + quick_sort(g2)
+    return g1 + g2 + g3
 
 
 quick_sort(list_fin)

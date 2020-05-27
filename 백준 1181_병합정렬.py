@@ -5,7 +5,6 @@ for i in range(num):
     Input = str(input()) #sys.stdin.readline.split()했는데 안됨 ㅠㅠㅠㅠㅠ
     if Input not in li:
         li.append(Input)
-list_fin = sorted(li)
 
 def merge_sort(a):
     n = len(a)
@@ -47,11 +46,8 @@ def merge_sort(a):
         ia += 1
     
 
-merge_sort(list_fin)   #길이가 같은 것을 알파벳 순으로 정렬 X
+merge_sort(li)   #길이가 같은 것을 알파벳 순으로 정렬 X, wait가 앞으로 감ㅠㅠ
 
 
-for i in list_fin:
+for i in li:
     print(i)
-
-
-    
