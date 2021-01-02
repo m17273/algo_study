@@ -1,48 +1,17 @@
-<<<<<<< HEAD
-
 def solution(phone_book):
-    phone_book_dict = {}
+    phone_book = sorted(phone_book, key= lambda x: len(x))
 
     for i in range(len(phone_book)):
-        if len(phone_book[i]) == 1:
-           for i in range(i+1, len(phone_book)):
-               if phone_book[i][0] == phone_book[i]:
-                   return False
+        if i == len(phone_book)-1:
+            return True
 
-        divide = 10**(len(phone_book[i])-2)
+        num = len(phone_book[i])
+        for j in range(i+1, len(phone_book)):
+            check = phone_book[j][0:num]
 
-        if int(phone_book[i])// divide not in phone_book_dict:
-            phone_book_dict[int(phone_book[i])//divide] = 1
-        else:
-            return False
-    return True
+            if phone_book[i] == check:
+                return False
 
+print(solution(['12', '123', '1235', '567', '88']))
 
-print(solution(["97674223", "976124", "118"]))
-
-
-=======
-
-def solution(phone_book):
-    phone_book_dict = {}
-
-    for i in range(len(phone_book)):
-        if len(phone_book[i]) == 1:
-           for i in range(i+1, len(phone_book)):
-               if phone_book[i][0] == phone_book[i]:
-                   return False
-
-        divide = 10**(len(phone_book[i])-2)
-
-        if int(phone_book[i])// divide not in phone_book_dict:
-            phone_book_dict[int(phone_book[i])//divide] = 1
-        else:
-            return False
-    return True
-
-
-print(solution(["97674223", "976124", "118"]))
-
-
->>>>>>> 110271555a90c65dbfb55deb605fb23ae037233a
-#테스트 11 통과 못함(반례가 뭔지 모르겟뜸 ㅜㅠㅠㅠㅠ)
+#통과
