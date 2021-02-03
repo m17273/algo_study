@@ -10,7 +10,7 @@ def starMaker():
 
         if cnt% 3 == 0 :
             print()
-        if cnt == 4:
+        if cnt == 
             print(' ', end='')
             cnt += 1
         
