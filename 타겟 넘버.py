@@ -1,7 +1,7 @@
 # bfs/dfs가 아닌 리스트로 통과
 # 주어진 수를 통해 생성 가능한 모든 노드를 배열에 집어넣은 후 count함수를 통해 target 갯수를 리턴
 def solution(numbers, target):
-    arr = [0]
+    arr = [0] # 첫 번째 인덱스 요소를 더하고 빼기 위한 0
 
     for i in numbers:
         temp = []
